@@ -1,0 +1,92 @@
+.chatList {
+  width: 340px;
+  height: 538px;
+  font-family: 'Noto Sans KR', sans-serif;
+  border: solid 1px #CDCDD2;
+
+  .title {
+    width: 100%;
+    height: 70px;
+    background-color: #3E3F4D;
+    color: #CDCDD2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .newMessageCreator {
+    width: 100%;
+    height: 70px;
+    background-color: #789EFE;
+    color: #FCFCFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  a {
+    width: 100%;
+  }
+
+  .chatsWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 398px;
+    background-color: #CDCDD2;
+    overflow: scroll;
+
+    .chatRoom {
+      width:100%;
+      height:70px;
+      background-color: white;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      border-bottom: solid 1px #CDCDD2;
+
+      .userImg {
+        width: 70px;
+        height: 100%;
+        background-size: cover;
+      }
+      .chatRoomInfo {
+        width: 250px;
+        height: 100%;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        position: relative;
+
+        div {
+          margin: 3px 0 3px 10px;
+        }
+        .userName {
+          font-weight: bold;
+        }
+        .lastMessage {
+          font-size: 12px;
+          font-weight: lighter;
+          color: #CDCDD2;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          width: 100%;
+        }
+
+        .lastMessageSentTime {
+          position: absolute;
+          top: 5px;
+          right: 0;
+          font-size: 10px;
+          color: #CDCDD2; 
+        }
+      }
+
+    }
+  }
+}

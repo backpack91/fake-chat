@@ -1,0 +1,210 @@
+.chatList {
+  width: 350px;
+  height: 538px;
+
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    background-color: #3E3F4D;
+
+    a {
+      width: 30px;
+    }
+
+    div:nth-child(1) {
+      color: #9E9FA6;
+      width: 25%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    div:nth-child(2) {
+      color: #CDCDD2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      height: 100%;
+    }
+
+    div:nth-child(3) {
+      width: 25%;
+      height: 100%;
+    }
+  }
+
+  .chatWrapper {
+    width: 320px;
+    height: 368px;
+    background-color: #EBEEF1;
+    overflow: scroll;
+    padding: 15px 15px 15px 15px;
+
+    .dateDividerWrapper {
+      position: relative;
+      width: 100%;
+      height: 40px;
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      align-items: center;
+
+      .dateDivider {
+        width: 100%;
+        height: 50%;
+        border-bottom: solid 1px #D5D5D7;
+      }
+
+      .prevDate {
+        position: absolute;
+        top: 28%;
+        background-color: #EBEEF1;
+        width: 40%;
+        text-align: center;
+        color: #D5D5D7;
+        font-size: 12px;
+      }
+    }
+
+    div:nth-child(n) {
+      margin-bottom: 10px;
+    }
+
+    .messagetOfTheOtherPerson {
+      width: 320px;
+      background-color: inherit;
+      position: relative;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-end;
+
+      .imgWrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 54px;
+        height: 54px;
+        border-radius: 50%;
+        background-size: cover;
+        box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .textWrapper {
+        width: 170px;
+        min-height: 30px;
+        margin: 25px 0 0 25px;
+        padding: 10px 20px 10px 30px;
+        background-color: white;
+        border-radius: 5px;
+        color: #99999D;
+        display: flex;
+        flex-wrap: wrap;
+        white-space: pre-wrap;
+      }
+
+      .dataWrapper {
+        width: 60px;
+        height: 100%;
+        font-size: 11px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        margin: 0 0 0 5px;
+        color: #C5C5C6;
+      }
+    }
+
+    .messageOfMine {
+      width: 320px;
+      background-color: inherit;
+      position: relative;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+
+      .imgWrapper {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 54px;
+        height: 54px;
+        border-radius: 50%;
+        background-size: cover;
+        box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .textWrapper {
+        width: 170px;
+        min-height: 30px;
+        margin: 25px 25px 0 0;
+        padding: 10px 30px 10px 20px;
+        background-color: white;
+        border-radius: 5px;
+        color: #99999D;
+        word-wrap: break-word;
+      }
+
+      .dataWrapper {
+        width: 60px;
+        height: 100%;
+        font-size: 11px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        margin: 0 5px 0 0;
+        color: #C5C5C6;
+      }
+    }
+  }
+
+  .inputWrapper {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    input {
+      width: 246px;
+      height: 70px;
+      border: none;
+      padding: 0;
+      color: #CDCDD2;
+      background-color: white;
+      color: #B9B9BE;
+      padding-left: 20px;
+      font-size: 15px;
+    }
+
+    input:focus {
+      outline: none;
+    }
+
+    .buttonWrapper {
+      width: 84px;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      button {
+        background-color: #878EFE;
+        color: #EAECFE;
+        border: none;
+        width: 55px;
+        height: 33px;
+      }
+
+      button:focus {
+        outline: none;
+      }
+    }
+  }
+}
