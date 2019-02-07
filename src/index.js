@@ -13,4 +13,5 @@ ReactDOM.render(
   <Provider store={store}>
     <Container />
   </Provider>,
-  document.getElementById('root'));
+  document.getElementById('root')
+);

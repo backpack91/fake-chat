@@ -1,5 +1,6 @@
 import * as types from '../constants/ActionTypes.js';
 import _ from 'lodash';
+
 const initialStates = {
   chatRooms: {allIds: [], byId:{}},
   users: {allIds: [], byId:{}},
@@ -8,7 +9,6 @@ const initialStates = {
 
 export default function chatInfos (state = initialStates, action) {
   const clonedState = _.cloneDeep(state);
-  console.log("clonedState: ", clonedState);
 
   switch (action.type) {
     case types.GET_CHAT_INFO :
@@ -28,9 +28,9 @@ export default function chatInfos (state = initialStates, action) {
         text: action.text,
         time: action.time,
         userId: action.userId
-      }
+      };
       chatRooms.byId[action.chatRoomId].chatIds.push(action.id);
-      console.log("clonedState before RETURN: ", clonedState);
+
       return clonedState;
 
     default :

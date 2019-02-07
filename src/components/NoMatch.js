@@ -9,8 +9,8 @@ export default function NoMatch() {
     backgroundColor: '#789EFE',
     width: '340px',
     height: '538px',
-    fontSize: '30px',
-  }
+    fontSize: '30px'
+  };
 
   return (
     <div style={styleOfNoMatch}>

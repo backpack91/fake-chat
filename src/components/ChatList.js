@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import './ChatList.scss';
 
 class ChatList extends Component {
-
   renderChatRooms() {
     const { chatRooms, chats, users } = this.props.chatInfos;
     const sortetdChatRoomIds = chatRooms.allIds.sort((prevId, nextId) => {
@@ -11,9 +10,7 @@ class ChatList extends Component {
     });
 
     return sortetdChatRoomIds.map(id => {
-      const userStyle = {
-        backgroundImage: `url(${users.byId[chatRooms.byId[id].userId].img})`
-      }
+      const userStyle = { backgroundImage: `url(${users.byId[chatRooms.byId[id].userId].img})` };
       const lastMessageId = chatRooms.byId[id].lastMessageId;
       const lastMessageSentTime = new Date(chats.byId[lastMessageId].time);
       let sentTimeShape;
@@ -24,8 +21,8 @@ class ChatList extends Component {
           minutes = `0${lastMessageSentTime.getMinutes()}` :
           minutes = lastMessageSentTime.getMinutes();
         lastMessageSentTime.getHours() < 12 ?
-        sentTimeShape = `오전 ${lastMessageSentTime.getHours()}:${minutes}` :
-        sentTimeShape = `오후 ${lastMessageSentTime.getHours() - 12}:${minutes}`;
+          sentTimeShape = `오전 ${lastMessageSentTime.getHours()}:${minutes}` :
+          sentTimeShape = `오후 ${lastMessageSentTime.getHours() - 12}:${minutes}`;
       } else {
         sentTimeShape = `${lastMessageSentTime.getMonth() + 1}월${lastMessageSentTime.getDate()}일`;
       }
@@ -65,7 +62,6 @@ class ChatList extends Component {
   }
 
   render () {
-    console.log("this.props in ChatList: ", this.props);
     return (
       <div className="chatList">
         <div className="title">

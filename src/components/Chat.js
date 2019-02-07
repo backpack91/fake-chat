@@ -19,7 +19,6 @@ class Chat extends Component {
     if (this.props.location.state) {
       chatWrapper = this.chatWrapper.current;
       inputBox = this.inputBox.current;
-
       chatWrapper.scrollTop = chatWrapper.scrollHeight;
       inputBox.focus();
     }
@@ -32,7 +31,6 @@ class Chat extends Component {
     if (this.props.location.state) {
       chatWrapper = this.chatWrapper.current;
       inputBox = this.inputBox.current;
-
       chatWrapper.scrollTop = chatWrapper.scrollHeight;
       inputBox.focus();
     }
@@ -49,29 +47,28 @@ class Chat extends Component {
       let timeBeforeNoon;
       let minutes;
       const sentTime = new Date(chats.byId[id].time);
-      const isSameDate = sentTime.getDate() !== prevDate.getDate();
+      const isDifferentDate = sentTime.getDate() !== prevDate.getDate();
       const yearMonthDate = `${sentTime.getYear() + 1900}년 ${sentTime.getMonth() + 1}월 ${sentTime.getDate()}일 (${days[sentTime.getDay() - 1]})`;
-      const userImgStyle = {
-        backgroundImage: `url(${users.byId[chats.byId[id].userId].img})`
-      }
+      const userImgStyle = { backgroundImage: `url(${users.byId[chats.byId[id].userId].img})` };
 
       String(sentTime.getMinutes()).length === 1 ?
         minutes = `0${sentTime.getMinutes()}` :
         minutes = sentTime.getMinutes();
       sentTime.getHours() < 12 ?
-      timeBeforeNoon = `오전 ${sentTime.getHours()}:${minutes}` :
-      timeAfterNoon = `오후 ${sentTime.getHours() - 12}:${minutes}`;
+        timeBeforeNoon = `오전 ${sentTime.getHours()}:${minutes}` :
+        timeAfterNoon = `오후 ${sentTime.getHours() - 12}:${minutes}`;
       prevDate = sentTime;
 
       if (chats.byId[id].userId === 1) {
         return (
           <Fragment key={id}>
             {
-              isSameDate ?
-              <div className="dateDividerWrapper">
-                <div className="dateDivider"></div>
-                <div className="prevDate">{yearMonthDate}</div>
-              </div> : ""
+              isDifferentDate ?
+                <div className="dateDividerWrapper">
+                  <div className="dateDivider"></div>
+                  <div className="prevDate">{yearMonthDate}</div>
+                </div> :
+                ""
             }
             <div className="messageOfMine">
               <div className="imgWrapper" style={userImgStyle}>
@@ -89,11 +86,12 @@ class Chat extends Component {
         return (
           <Fragment key={id}>
             {
-              isSameDate ?
-              <div className="dateDividerWrapper">
-                <div className="dateDivider"></div>
-                <div className="prevDate">{yearMonthDate}</div>
-              </div> : ""
+              isDifferentDate ?
+                <div className="dateDividerWrapper">
+                  <div className="dateDivider"></div>
+                  <div className="prevDate">{yearMonthDate}</div>
+                </div> :
+                ""
             }
             <div className="messagetOfTheOtherPerson">
               <div className="imgWrapper" style={userImgStyle}>
@@ -108,7 +106,7 @@ class Chat extends Component {
           </Fragment>
         );
       }
-    })
+    });
   }
 
   sendMessageOnClick () {
@@ -117,36 +115,36 @@ class Chat extends Component {
     const newId = chats.allIds[chats.allIds.length - 1] + 1;
     const today = new Date();
 
-    sendMessage({
-      text: inputBox.value,
-      time: `${today.getYear()+1900}-${today.getMonth() + 1}-${today.getDate()}`,
-      userId: 1,
-      id: newId,
-      chatRoomId: this.props.location.state.chatRoomId,
-    });
+    if (inputBox.value.length > 0) {
+      sendMessage({
+        text: inputBox.value,
+        time: `${today.getYear()+1900}-${today.getMonth() + 1}-${today.getDate()}`,
+        userId: 1,
+        id: newId,
+        chatRoomId: this.props.location.state.chatRoomId
+      });
 
-    inputBox.value = '';
-    inputBox.focus();
+      inputBox.value = '';
+      inputBox.focus();
+    }
   }
 
   sendMessageOnKeyDown (event) {
-    if(event.keyCode === 13){
+    if(event.keyCode === 13 && event.target.value.length > 0){
       const { sendMessage, chats } = this.props.chatInfos;
       const inputBox = event.target;
       const newId = chats.allIds[chats.allIds.length - 1] + 1;
       const today = new Date();
-      console.log("event.target.value: ", event.target.value)
+
       sendMessage({
         text: inputBox.value,
         time: `${today}`,
         userId: 1,
         id: newId,
-        chatRoomId: this.props.location.state.chatRoomId,
+        chatRoomId: this.props.location.state.chatRoomId
       });
-
       inputBox.value = '';
     }
-
   }
 
   render () {
@@ -154,7 +152,8 @@ class Chat extends Component {
 
     return (
       <Fragment>
-      {location.state ?
+      {
+        location.state ?
         <div className="chatList">
           <div className="header">
             <div>

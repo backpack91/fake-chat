@@ -5,7 +5,7 @@ export function chatInfos (chatInfos) {
     type: types.GET_CHAT_INFO,
     chatRooms: chatInfos.chatRooms,
     users: chatInfos.users,
-    chats: chatInfos.chats,
+    chats: chatInfos.chats
   };
 }
 
@@ -17,5 +17,5 @@ export function sendMessage (message) {
     userId: message.userId,
     id: message.id,
     chatRoomId: message.chatRoomId
-  }
+  };
 }

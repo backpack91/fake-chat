@@ -10,7 +10,6 @@ class ChatInfosContainer extends Component {
   }
 
   render() {
-    console.log("this.props in containers: ", this.props)
     return (
       <App chatInfos={this.props}/>
     );
@@ -32,8 +31,8 @@ const mapStateToProps = (state) => {
   return {
     chatRooms: state ? state.chatRooms : state,
     chats: state ? state.chats : state,
-    users: state ? state.users : state,
-  }
+    users: state ? state.users : state
+  };
 }
 
 const mapDispatchToProps = (dispatch) => {
@@ -45,7 +44,7 @@ const mapDispatchToProps = (dispatch) => {
         dispatch(chatInfos(chatData));
       })
       .catch(err => {
-        console.log("err: ", err)
+        console.log("err: ", err);
       });
     },
     sendMessage: (message) => {
