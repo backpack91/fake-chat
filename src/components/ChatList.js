@@ -46,7 +46,7 @@ class ChatList extends Component {
           <div className='chatRoom'>
             <div className='userImg' style={userStyle}></div>
             <div className='chatRoomInfo'>
-              <div className'userName'>
+              <div className='userName'>
                 {users.byId[chatRooms.byId[id].userId].name}
               </div>
               <div className='lastMessage'>
