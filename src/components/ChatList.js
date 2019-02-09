@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './ChatList.scss';
 
 class ChatList extends Component {
+  
   renderChatRooms() {
     const { chatRooms, chats, users } = this.props.chatInfos;
     const sortetdChatRoomIds = chatRooms.allIds.sort((prevId, nextId) => {

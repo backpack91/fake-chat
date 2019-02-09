@@ -1,4 +1,4 @@
-import * as types from '../constants/ActionTypes.js';
+import * as types from '../constants/ActionTypes';
 import _ from 'lodash';
 
 const initialStates = {
@@ -16,7 +16,7 @@ export default function chatInfos (state = initialStates, action) {
         ...state,
         chatRooms: action.chatRooms,
         users: action.users,
-        chats: action.chats,
+        chats: action.chats
       };
 
     case types.SEND_MESSAGE :

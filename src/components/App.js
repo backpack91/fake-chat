@@ -1,15 +1,11 @@
 import React, { Component, Fragment } from 'react';
 import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom';
+import ChatList from './ChatList';
+import Chat from './Chat';
+import NoMatch from './NoMatch';
 import './App.scss';
-import ChatList from './ChatList.js';
-import Chat from './Chat.js';
-import NoMatch from './NoMatch.js';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
 
   render() {
     return (

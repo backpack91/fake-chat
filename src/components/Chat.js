@@ -1,9 +1,10 @@
 import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import NoMatch from './NoMatch.js';
+import NoMatch from './NoMatch';
 import './Chat.scss';
 
 class Chat extends Component {
+
   constructor(props) {
     super(props);
     this.inputBox = React.createRef();

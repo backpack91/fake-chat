@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { chatInfos, sendMessage } from '../actions';
-import App from '../components/App.js';
+import App from '../components/App';
 
 class ChatInfosContainer extends Component {
 

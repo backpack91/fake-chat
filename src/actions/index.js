@@ -1,4 +1,4 @@
-import * as types from '../constants/ActionTypes.js';
+import * as types from '../constants/ActionTypes';
 
 export function chatInfos (chatInfos) {
   return {
