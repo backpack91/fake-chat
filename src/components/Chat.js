@@ -40,7 +40,7 @@ class Chat extends Component {
   renderChats() {
     const { chatRoomId } = this.props.location.state;
     const { chatRooms, chats, users } = this.props.chatInfos;
-    const days = ["월", "화", "수", "목", "금", "토", "일"];
+    const days = ["일", "월", "화", "수", "목", "금", "토"];
     let prevDate = new Date();
 
     return chatRooms.byId[chatRoomId].chatIds.map(id => {
@@ -49,13 +49,13 @@ class Chat extends Component {
       let minutes;
       const sentTime = new Date(chats.byId[id].time);
       const isDifferentDate = sentTime.getDate() !== prevDate.getDate();
-      const yearMonthDate = `${sentTime.getYear() + 1900}년 ${sentTime.getMonth() + 1}월 ${sentTime.getDate()}일 (${days[sentTime.getDay() - 1]})`;
+      const yearMonthDate = `${sentTime.getYear() + 1900}년 ${sentTime.getMonth() + 1}월 ${sentTime.getDate()}일 (${days[sentTime.getDay()]})`;
       const userImgStyle = { backgroundImage: `url(${users.byId[chats.byId[id].userId].img})` };
 
       String(sentTime.getMinutes()).length === 1 ?
         minutes = `0${sentTime.getMinutes()}` :
         minutes = sentTime.getMinutes();
-      sentTime.getHours() < 12 ?
+      sentTime.getHours() <= 12 ?
         timeBeforeNoon = `오전 ${sentTime.getHours()}:${minutes}` :
         timeAfterNoon = `오후 ${sentTime.getHours() - 12}:${minutes}`;
       prevDate = sentTime;

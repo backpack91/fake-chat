@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './ChatList.scss';
 
 class ChatList extends Component {
-  
+
   renderChatRooms() {
     const { chatRooms, chats, users } = this.props.chatInfos;
     const sortetdChatRoomIds = chatRooms.allIds.sort((prevId, nextId) => {
@@ -21,7 +21,7 @@ class ChatList extends Component {
         String(lastMessageSentTime.getMinutes()).length === 1 ?
           minutes = `0${lastMessageSentTime.getMinutes()}` :
           minutes = lastMessageSentTime.getMinutes();
-        lastMessageSentTime.getHours() < 12 ?
+        lastMessageSentTime.getHours() <= 12 ?
           sentTimeShape = `오전 ${lastMessageSentTime.getHours()}:${minutes}` :
           sentTimeShape = `오후 ${lastMessageSentTime.getHours() - 12}:${minutes}`;
       } else {

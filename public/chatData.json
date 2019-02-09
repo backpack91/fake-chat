@@ -12,9 +12,24 @@
         "id": 2,
         "userId": 3,
         "chatIds": [3, 6, 7, 9, 10]
+      },
+      "3": {
+        "id": 3,
+        "userId": 4,
+        "chatIds": [11, 12, 13]
+      },
+      "4": {
+        "id": 4,
+        "userId": 5,
+        "chatIds": [14, 15, 16]
+      },
+      "5": {
+        "id": 5,
+        "userId": 6,
+        "chatIds": [17, 18, 19]
       }
     },
-    "allIds": [1, 2]
+    "allIds": [1, 2, 3, 4, 5]
   },
 
   "users": {
@@ -33,9 +48,24 @@
         "id": 3,
         "img": "http://journal.kobeta.com/wp-content/uploads/2016/10/kbs_%EB%A1%9C%EA%B3%A0.jpg",
         "name": "KBS"
+      },
+      "4": {
+        "id": 4,
+        "img": "https://pds.joins.com/news/component/htmlphoto_mmdata/201705/30/b2190a6f-2963-40f1-9c16-3bb114d7ca3f.jpg",
+        "name": "의경킬러"
+      },
+      "5": {
+        "id": 5,
+        "img": "https://previews.123rf.com/images/freehandz/freehandz1209/freehandz120900307/15344501-shef.jpg",
+        "name": "hyeo"
+      },
+      "6": {
+        "id": 6,
+        "img": "http://image.sportsseoul.com/2017/06/08/news/20170608160353_0.jpg",
+        "name": "클론장인"
       }
     },
-    "allIds": [1, 2, 3]
+    "allIds": [1, 2, 3, 4, 5, 6]
   },
 
   "chats": {
@@ -86,7 +116,7 @@
         "id": 8,
         "time": "Sat Nov 10 2018 18:55:00 GMT+0900 (Korean Standard Time)",
         "userId": 2,
-        "text": "아 방탄 영화보러가야디~~"
+        "text": "아..나는 가수를 접고 개발자가 되고야 말겠어!!!"
       },
       "9": {
         "id": 9,
@@ -99,8 +129,62 @@
         "time": "Sat Nov 10 2018 19:10:00 GMT+0900 (Korean Standard Time)",
         "userId": 1,
         "text": "범석님..저는 전기일 안할래요ㅠ.ㅠ"
+      },
+      "11": {
+        "id": 11,
+        "time": "Sat Jan 05 2019 13:00:00 GMT+0900 (Korean Standard Time)",
+        "userId": 4,
+        "text": "오늘은 광화문 가는날~❤️"
+      },
+      "12": {
+        "id": 12,
+        "time": "Sat Jan 5 2019 13:15:00 GMT+0900 (Korean Standard Time)",
+        "userId": 1,
+        "text": "넹????"
+      },
+      "13": {
+        "id": 13,
+        "time": "Sat Jan 5 2019 13:20:00 GMT+0900 (Korean Standard Time)",
+        "userId": 4,
+        "text": "오늘의 의경킬러 나야나~~~"
+      },
+      "14": {
+        "id": 14,
+        "time": "Sun Jan 05 2019 13:00:00 GMT+0900 (Korean Standard Time)",
+        "userId": 5,
+        "text": "나는 혀주누..! 나는 아무거나 맛 보지 않지!!"
+      },
+      "15": {
+        "id": 15,
+        "time": "Sun Jan 6 2019 13:15:00 GMT+0900 (Korean Standard Time)",
+        "userId": 1,
+        "text": "역시 주누님!!"
+      },
+      "16": {
+        "id": 16,
+        "time": "Sun Jan 6 2019 13:20:00 GMT+0900 (Korean Standard Time)",
+        "userId": 5,
+        "text": "hyeo..."
+      },
+      "17": {
+        "id": 17,
+        "time": "Sat Feb 9 2019 13:10:00 GMT+0900 (Korean Standard Time)",
+        "userId": 6,
+        "text": "나는 클론장인.. 오늘도 클론만 4번째.."
+      },
+      "18": {
+        "id": 18,
+        "time": "Sat Feb 9 2019 13:15:00 GMT+0900 (Korean Standard Time)",
+        "userId": 6,
+        "text": "다함께 쿵따리 샤바라~~~~"
+      },
+      "19": {
+        "id": 19,
+        "time": "Sat Feb 9 2019 13:16:00 GMT+0900 (Korean Standard Time)",
+        "userId": 6,
+        "text": "git clone... 세상에서 제일 아름다운 명령어...하핫..."
       }
     },
-    "allIds": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    "allIds": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
   }
 }
