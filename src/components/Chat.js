@@ -40,7 +40,7 @@ class Chat extends Component {
   renderChats() {
     const { chatRoomId } = this.props.location.state;
     const { chatRooms, chats, users } = this.props.chatInfos;
-    const days = ["일", "월", "화", "수", "목", "금", "토"];
+    const days = ['일', '월', '화', '수', '목', '금', '토'];
     let prevDate = new Date();
 
     return chatRooms.byId[chatRoomId].chatIds.map(id => {
@@ -65,19 +65,19 @@ class Chat extends Component {
           <Fragment key={id}>
             {
               isDifferentDate ?
-                <div className="dateDividerWrapper">
-                  <div className="dateDivider"></div>
-                  <div className="prevDate">{yearMonthDate}</div>
+                <div className='dateDividerWrapper'>
+                  <div className='dateDivider'></div>
+                  <div className='prevDate'>{yearMonthDate}</div>
                 </div> :
-                ""
+                ''
             }
-            <div className="messageOfMine">
-              <div className="imgWrapper" style={userImgStyle}>
+            <div className='messageOfMine'>
+              <div className='imgWrapper' style={userImgStyle}>
               </div>
-              <div className="dataWrapper">
+              <div className='dataWrapper'>
                 {sentTime.getHours() > 12 ? timeAfterNoon : timeBeforeNoon}
               </div>
-              <div className="textWrapper">
+              <div className='textWrapper'>
                 {chats.byId[id].text}
               </div>
             </div>
@@ -88,19 +88,19 @@ class Chat extends Component {
           <Fragment key={id}>
             {
               isDifferentDate ?
-                <div className="dateDividerWrapper">
-                  <div className="dateDivider"></div>
-                  <div className="prevDate">{yearMonthDate}</div>
+                <div className='dateDividerWrapper'>
+                  <div className='dateDivider'></div>
+                  <div className='prevDate'>{yearMonthDate}</div>
                 </div> :
-                ""
+                ''
             }
-            <div className="messagetOfTheOtherPerson">
-              <div className="imgWrapper" style={userImgStyle}>
+            <div className='messagetOfTheOtherPerson'>
+              <div className='imgWrapper' style={userImgStyle}>
               </div>
-              <div className="textWrapper">
+              <div className='textWrapper'>
                 {chats.byId[id].text}
               </div>
-              <div className="dataWrapper">
+              <div className='dataWrapper'>
                 {sentTime.getHours() > 12 ? timeAfterNoon : timeBeforeNoon}
               </div>
             </div>
@@ -155,8 +155,8 @@ class Chat extends Component {
       <Fragment>
       {
         location.state ?
-        <div className="chatList">
-          <div className="header">
+        <div className='chatList'>
+          <div className='header'>
             <div>
               <Link to='/chatList'>
                 뒤로
@@ -165,12 +165,12 @@ class Chat extends Component {
             <div>{location.state.userName}</div>
             <div></div>
           </div>
-          <div className="chatWrapper" ref={this.chatWrapper}>
-            {chatInfos.chatRooms.allIds.length ? this.renderChats() : ""}
+          <div className='chatWrapper' ref={this.chatWrapper}>
+            {chatInfos.chatRooms.allIds.length ? this.renderChats() : ''}
           </div>
-          <div className="inputWrapper">
-            <input placeholder="type here :)" ref={this.inputBox} onKeyDown={this.sendMessageOnKeyDown}></input>
-            <div className="buttonWrapper">
+          <div className='inputWrapper'>
+            <input placeholder='type here :)' ref={this.inputBox} onKeyDown={this.sendMessageOnKeyDown}></input>
+            <div className='buttonWrapper'>
               <button onClick={this.sendMessageOnClick}>보내기</button>
             </div>
           </div>

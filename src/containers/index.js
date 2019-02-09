@@ -38,13 +38,13 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     onMount: () => {
-      fetch("http://localhost:3000/chatData.json")
+      fetch('http://localhost:3000/chatData.json')
       .then(res => res.json())
       .then(chatData => {
         dispatch(chatInfos(chatData));
       })
       .catch(err => {
-        console.log("err: ", err);
+        console.log('err: ', err);
       });
     },
     sendMessage: (message) => {

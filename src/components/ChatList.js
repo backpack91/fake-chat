@@ -43,16 +43,16 @@ class ChatList extends Component {
           }}
           key={id}
         >
-          <div className="chatRoom">
-            <div className="userImg" style={userStyle}></div>
-            <div className="chatRoomInfo">
-              <div className="userName">
+          <div className='chatRoom'>
+            <div className='userImg' style={userStyle}></div>
+            <div className='chatRoomInfo'>
+              <div className'userName'>
                 {users.byId[chatRooms.byId[id].userId].name}
               </div>
-              <div className="lastMessage">
+              <div className='lastMessage'>
                 {chatRooms.byId[id].lastMessage}
               </div>
-              <div className="lastMessageSentTime">
+              <div className='lastMessageSentTime'>
                 {sentTimeShape}
               </div>
             </div>
@@ -64,15 +64,15 @@ class ChatList extends Component {
 
   render () {
     return (
-      <div className="chatList">
-        <div className="title">
+      <div className='chatList'>
+        <div className='title'>
           CHAT
         </div>
-        <div className="newMessageCreator">
+        <div className='newMessageCreator'>
           + New message
         </div>
-        <div className="chatsWrapper">
-          {this.props.chatInfos.chatRooms ? this.renderChatRooms() : ""}
+        <div className='chatsWrapper'>
+          {this.props.chatInfos.chatRooms ? this.renderChatRooms() : ''}
         </div>
       </div>
     );
